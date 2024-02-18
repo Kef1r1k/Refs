@@ -24,6 +24,10 @@ extension Color {
         return Color(UIColor(red: 228/255, green: 228/255, blue: 230/255, alpha: 1.0))
     }
     
+    public static var gray: Color {
+        return Color(UIColor(red: 121/255, green: 121/255, blue: 121/255, alpha: 1.0))
+    }
+    
     public static var darkBlue: Color {
         return Color(UIColor(red: 4/255, green: 0/255, blue: 184/255, alpha: 1.0))
     }

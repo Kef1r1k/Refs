@@ -20,30 +20,30 @@ struct UserProfileCV: View {
 
                 Section {
                     HStack(spacing: 12){
-                        Image("NameIcon").foregroundColor(.black)
+                        Image("NameIcon")
                         VStack(alignment: .leading, spacing: 2){
-                            Text("Имя").foregroundStyle(Color.gray).font(.system(size: 12))
-                            TextField("Name", text: $viewModel.name, prompt: Text("Имя")).frame(alignment: .center)
+                            Text("Имя").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
+                            TextField("Name", text: $viewModel.name, prompt: Text("Имя")).frame(alignment: .center).font(Font.custom("Fugue-Regular", size: 16))
                         }
                     }
                 }
                 
                 Section{
                     HStack(spacing: 12){
-                        Image("NicknameIcon").foregroundColor(.black)
+                        Image("NicknameIcon")
                         VStack(alignment: .leading, spacing: 2){
-                            Text("Ник").foregroundStyle(Color.gray).font(.system(size: 12))
-                            TextField("Nickname", text: $viewModel.nickname, prompt: Text("Nickname")).frame(alignment: .center)
+                            Text("Ник").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
+                            TextField("Nickname", text: $viewModel.nickname, prompt: Text("Nickname")).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16))
                         }
                     }
                 }
                 
                 Section {
                     HStack(spacing: 12){
-                        Image("EmailIcon").foregroundColor(.black)
+                        Image("EmailIcon")
                         VStack(alignment: .leading, spacing: 2){
-                            Text("Почта").foregroundStyle(Color.gray).font(.system(size: 12))
-                            TextField("Email", text: $viewModel.email, prompt: Text("Email name")).frame(alignment: .center)
+                            Text("Почта").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
+                            TextField("Email", text: $viewModel.email, prompt: Text("Email name")).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16))
                         }
                     }
                 }
@@ -52,21 +52,21 @@ struct UserProfileCV: View {
             List{
                 Section{
                     HStack(spacing: 12){
-                        Image("TgIcon").foregroundColor(.black)
+                        Image("TgIcon")
                         VStack(alignment: .leading, spacing: 2){
-                            Text("Телеграм").foregroundStyle(Color.gray).font(.system(size: 12))
-                            TextField("Telegram", text: $viewModel.tg, prompt: Text("Telegram")).frame(alignment: .center)
+                            Text("Телеграм").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
+                            TextField("Telegram", text: $viewModel.tg, prompt: Text("Telegram")).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16))
                         }
                     }
                 }
                 
                 Section{
                     HStack(spacing: 12){
-                        Image("BirthdayIcon").foregroundColor(.black)
+                        Image("BirthdayIcon")
                         //                        TextField("Birthday", text: $viewModel.birthday, prompt: Text("День рождения")).frame(alignment: .center)
                         VStack(alignment: .leading, spacing: 2){
-                            Text("Дата рождения").foregroundStyle(Color.gray).font(.system(size: 12))
-                            DatePicker("Birthday", selection: $viewModel.birthday, displayedComponents: .date).datePickerStyle(.compact)
+                            Text("Дата рождения").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
+                            DatePicker("Birthday", selection: $viewModel.birthday, displayedComponents: .date).datePickerStyle(.compact).font(.custom("Fugue-Regular", size: 16))
                         }
                     }
                 }
@@ -91,6 +91,8 @@ struct UserProfileCV: View {
         .padding().onAppear{
             restore(viewModel: viewModel)
         }
+        
+  
         
     }
     
