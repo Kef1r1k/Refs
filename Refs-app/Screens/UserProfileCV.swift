@@ -71,29 +71,21 @@ struct UserProfileCV: View {
                     }
                 }
             }.listSectionSpacing(.compact)
-                
-            Section {
-                Button(action: {
-                    viewModel.saveInUserDefaults()
-                }, label: {
-                    Text("Save")
-                })
-                
-                Button(action: {
-                    restore(viewModel: viewModel)
-                }, label: {
-                    Text("Cancel")
-                })
-                
-            }
         }.background(Color.lightGray)
         .scrollContentBackground(.hidden)
         .padding().onAppear{
             restore(viewModel: viewModel)
         }
-        
-  
-        
+    
+            HStack(alignment: .center, spacing: 12){
+                SecondaryButton(text: "сбросить") {
+                    restore(viewModel: viewModel)
+                }
+                
+                PrimaryButton(text: "сохранить") {
+                    viewModel.saveInUserDefaults()
+                }
+            }.frame(width: 330)
     }
     
     @MainActor

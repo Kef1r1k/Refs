@@ -22,6 +22,8 @@
 		8A5470AF2B821F0400D7AEE2 /* Fugue-mono.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8A5470AB2B821F0400D7AEE2 /* Fugue-mono.otf */; };
 		8A5470B02B821F0400D7AEE2 /* Fugue-headline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8A5470AC2B821F0400D7AEE2 /* Fugue-headline.otf */; };
 		8A5470B12B821F0400D7AEE2 /* Fugue-regular-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8A5470AD2B821F0400D7AEE2 /* Fugue-regular-italic.otf */; };
+		8A5470B52B8226B900D7AEE2 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5470B42B8226B900D7AEE2 /* PrimaryButton.swift */; };
+		8A5470B72B82295A00D7AEE2 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5470B62B82295A00D7AEE2 /* SecondaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		8A5470AC2B821F0400D7AEE2 /* Fugue-headline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fugue-headline.otf"; sourceTree = "<group>"; };
 		8A5470AD2B821F0400D7AEE2 /* Fugue-regular-italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fugue-regular-italic.otf"; sourceTree = "<group>"; };
 		8A5470B32B821F7000D7AEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8A5470B42B8226B900D7AEE2 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		8A5470B62B82295A00D7AEE2 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 			children = (
 				8A5470A52B81F7D800D7AEE2 /* ProfileImage.swift */,
 				8A5470A72B81F99600D7AEE2 /* ChangableAvatarView.swift */,
+				8A5470B42B8226B900D7AEE2 /* PrimaryButton.swift */,
+				8A5470B62B82295A00D7AEE2 /* SecondaryButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -224,8 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A5470B72B82295A00D7AEE2 /* SecondaryButton.swift in Sources */,
 				8A0175BC2B72AF6F00C8C93E /* ContentView.swift in Sources */,
 				8A5470A62B81F7D800D7AEE2 /* ProfileImage.swift in Sources */,
+				8A5470B52B8226B900D7AEE2 /* PrimaryButton.swift in Sources */,
 				8A5470A32B81F55500D7AEE2 /* UserModel.swift in Sources */,
 				8A5470A82B81F99600D7AEE2 /* ChangableAvatarView.swift in Sources */,
 				8A0175BA2B72AF6F00C8C93E /* Refs_appApp.swift in Sources */,
