@@ -12,71 +12,71 @@ struct UserProfileCV: View {
     @StateObject var viewModel = UserModel()
     
     var body: some View {
-        Section {
-            ChangableAvatarView(viewModel: viewModel)
-        }.frame(width: 136, height: 136, alignment: .center).padding(.top, 50)
-        Form {
-            List{
-
-                Section {
-                    HStack(spacing: 12){
-                        Image("NameIcon")
-                        VStack(alignment: .leading, spacing: 2){
-                            Text("Имя").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
-                            TextField("Name", text: $viewModel.name, prompt: Text("Имя")).frame(alignment: .center).font(Font.custom("Fugue-Regular", size: 16))
+        VStack{
+            Section {
+                ChangableAvatarView(viewModel: viewModel)
+            }.frame(width: 136, height: 136, alignment: .center).padding(.top, 50)
+            Form {
+                List{
+                    
+                    Section {
+                        HStack(spacing: 12){
+                            Image("NameIcon")
+                            VStack(alignment: .leading, spacing: 2){
+                                Text("Имя").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
+                                TextField("Name", text: $viewModel.name, prompt: Text("Имя")).frame(alignment: .center).font(Font.custom("Fugue-Regular", size: 16))
+                            }
                         }
                     }
-                }
+                    
+                    Section{
+                        HStack(spacing: 12){
+                            Image("NicknameIcon")
+                            VStack(alignment: .leading, spacing: 2){
+                                Text("Ник").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
+                                TextField("Nickname", text: $viewModel.nickname, prompt: Text("Nickname")).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16))
+                            }
+                        }
+                    }
+                    
+                    Section {
+                        HStack(spacing: 12){
+                            Image("EmailIcon")
+                            VStack(alignment: .leading, spacing: 2){
+                                Text("Почта").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
+                                TextField("Email", text: $viewModel.email, prompt: Text("Email name")).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16))
+                            }
+                        }
+                    }
+                }.listSectionSpacing(.compact)
                 
-                Section{
-                    HStack(spacing: 12){
-                        Image("NicknameIcon")
-                        VStack(alignment: .leading, spacing: 2){
-                            Text("Ник").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
-                            TextField("Nickname", text: $viewModel.nickname, prompt: Text("Nickname")).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16))
+                List{
+                    Section{
+                        HStack(spacing: 12){
+                            Image("TgIcon")
+                            VStack(alignment: .leading, spacing: 2){
+                                Text("Телеграм").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
+                                TextField("Telegram", text: $viewModel.tg, prompt: Text("Telegram")).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16))
+                            }
                         }
                     }
-                }
-                
-                Section {
-                    HStack(spacing: 12){
-                        Image("EmailIcon")
-                        VStack(alignment: .leading, spacing: 2){
-                            Text("Почта").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
-                            TextField("Email", text: $viewModel.email, prompt: Text("Email name")).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16))
+                    
+                    Section{
+                        HStack(spacing: 12){
+                            Image("BirthdayIcon")
+                            //                        TextField("Birthday", text: $viewModel.birthday, prompt: Text("День рождения")).frame(alignment: .center)
+                            VStack(alignment: .leading, spacing: 2){
+                                Text("Дата рождения").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
+                                DatePicker("Birthday", selection: $viewModel.birthday, displayedComponents: .date).datePickerStyle(.compact).font(.custom("Fugue-Regular", size: 16))
+                            }
                         }
                     }
+                }.listSectionSpacing(.compact)
+            }.scrollContentBackground(.hidden)
+                .padding().onAppear{
+                    restore(viewModel: viewModel)
                 }
-            }.listSectionSpacing(.compact)
             
-            List{
-                Section{
-                    HStack(spacing: 12){
-                        Image("TgIcon")
-                        VStack(alignment: .leading, spacing: 2){
-                            Text("Телеграм").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
-                            TextField("Telegram", text: $viewModel.tg, prompt: Text("Telegram")).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16))
-                        }
-                    }
-                }
-                
-                Section{
-                    HStack(spacing: 12){
-                        Image("BirthdayIcon")
-                        //                        TextField("Birthday", text: $viewModel.birthday, prompt: Text("День рождения")).frame(alignment: .center)
-                        VStack(alignment: .leading, spacing: 2){
-                            Text("Дата рождения").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
-                            DatePicker("Birthday", selection: $viewModel.birthday, displayedComponents: .date).datePickerStyle(.compact).font(.custom("Fugue-Regular", size: 16))
-                        }
-                    }
-                }
-            }.listSectionSpacing(.compact)
-        }.background(Color.lightGray)
-        .scrollContentBackground(.hidden)
-        .padding().onAppear{
-            restore(viewModel: viewModel)
-        }
-    
             HStack(alignment: .center, spacing: 12){
                 SecondaryButton(text: "сбросить") {
                     restore(viewModel: viewModel)
@@ -85,7 +85,8 @@ struct UserProfileCV: View {
                 PrimaryButton(text: "сохранить") {
                     viewModel.saveInUserDefaults()
                 }
-            }.frame(width: 330)
+            }.padding().padding(.bottom, 52)
+        }.background(Color.lightGray)
     }
     
     @MainActor
