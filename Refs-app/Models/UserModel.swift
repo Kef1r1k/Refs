@@ -19,7 +19,7 @@ class UserModel: ObservableObject {
     @Published var nickname: String = ""
     @Published var email: String = ""
     @Published var tg: String = ""
-    @Published var birthday: String = ""
+    @Published var birthday = Date()
     
     // MARK: - User image state
 
