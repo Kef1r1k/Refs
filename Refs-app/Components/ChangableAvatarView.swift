@@ -14,9 +14,9 @@ struct ChangableAvatarView: View {
     
     var body: some View {
         
-        ProfileImage(imageState: viewModel.imageState).scaledToFill().clipShape(Circle()).frame(width: 100, height: 100).background {
+        ProfileImage(imageState: viewModel.imageState).scaledToFill().clipShape(Circle()).frame(width: 136, height: 136).background {
             Circle().fill(
-                Color.red)
+                Color.lightGray)
         } .overlay(alignment: .center) {
             PhotosPicker(selection: $viewModel.imageSelection, matching: .images, photoLibrary: .shared()) {
                 Circle().opacity(0)

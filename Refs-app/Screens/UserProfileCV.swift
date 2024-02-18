@@ -12,11 +12,10 @@ struct UserProfileCV: View {
     @StateObject var viewModel = UserModel()
     
     var body: some View {
+        Section {
+            ChangableAvatarView(viewModel: viewModel)
+        }.frame(width: 136, height: 136, alignment: .center).padding(.top, 50)
         Form {
-            Section {
-                ChangableAvatarView(viewModel: viewModel)
-            }
-            
             List{
 
                 Section {
