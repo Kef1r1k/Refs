@@ -31,6 +31,8 @@
 		8A54883B2BB4907100AE1ADC /* HowToPlayCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54883A2BB4907100AE1ADC /* HowToPlayCV.swift */; };
 		8A54883D2BB497DF00AE1ADC /* HowToPlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54883C2BB497DF00AE1ADC /* HowToPlayModel.swift */; };
 		8A54883F2BB49C6100AE1ADC /* HTPSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54883E2BB49C6100AE1ADC /* HTPSlide.swift */; };
+		8A5488842BB4ABD000AE1ADC /* PrimaryButtonWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5488832BB4ABD000AE1ADC /* PrimaryButtonWhite.swift */; };
+		8A5488862BB4AC0B00AE1ADC /* SecondaryButtonWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5488852BB4AC0B00AE1ADC /* SecondaryButtonWhite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		8A54883A2BB4907100AE1ADC /* HowToPlayCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayCV.swift; sourceTree = "<group>"; };
 		8A54883C2BB497DF00AE1ADC /* HowToPlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayModel.swift; sourceTree = "<group>"; };
 		8A54883E2BB49C6100AE1ADC /* HTPSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTPSlide.swift; sourceTree = "<group>"; };
+		8A5488832BB4ABD000AE1ADC /* PrimaryButtonWhite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonWhite.swift; sourceTree = "<group>"; };
+		8A5488852BB4AC0B00AE1ADC /* SecondaryButtonWhite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonWhite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 			children = (
 				8A5470A52B81F7D800D7AEE2 /* ProfileImage.swift */,
 				8A5470A72B81F99600D7AEE2 /* ChangableAvatarView.swift */,
+				8A5488832BB4ABD000AE1ADC /* PrimaryButtonWhite.swift */,
+				8A5488852BB4AC0B00AE1ADC /* SecondaryButtonWhite.swift */,
 				8A5470B42B8226B900D7AEE2 /* PrimaryButton.swift */,
 				8A5470B62B82295A00D7AEE2 /* SecondaryButton.swift */,
 				8A5488362BB474B300AE1ADC /* TabBar.swift */,
@@ -270,12 +276,14 @@
 				8A0175BA2B72AF6F00C8C93E /* Refs_appApp.swift in Sources */,
 				8A5470A12B81F47400D7AEE2 /* UserProfileCV.swift in Sources */,
 				8A5488352BB473B500AE1ADC /* HTTPReceiver.swift in Sources */,
+				8A5488842BB4ABD000AE1ADC /* PrimaryButtonWhite.swift in Sources */,
 				8A0175D02B73904100C8C93E /* UIColorExtension.swift in Sources */,
 				8A0175C92B72B27100C8C93E /* RegistrationModel.swift in Sources */,
 				8A0175CC2B72B3C700C8C93E /* RegistrationCV.swift in Sources */,
 				8A54883B2BB4907100AE1ADC /* HowToPlayCV.swift in Sources */,
 				8A5488322BB470F900AE1ADC /* AllTasksCV.swift in Sources */,
 				8A5488392BB47AFB00AE1ADC /* MainView.swift in Sources */,
+				8A5488862BB4AC0B00AE1ADC /* SecondaryButtonWhite.swift in Sources */,
 				8A5488372BB474B300AE1ADC /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
