@@ -5,74 +5,71 @@
 //  Created by Екатерина Никифорова on 27.03.2024.
 //
 
-import Foundation
 import SwiftUI
 
 struct TabBar: View {
-    @Binding var selectedTab: Int
+    @State var selectTab = "1"
+    
+    let tabs = ["правила","задания","профиль"]
+    
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            
-            Group { // group everything together to maintain same tabbar color on all pages
-//                Text("Главная") // put a view here like HomeVC()
-//                    .tabItem {
-//                        Image(systemName: "house")
-//                        Text("Главная")
-//                    }
-//                    .tag(0)
-                
-                
-                    UserProfileCV()
-//                        .toolbar {
-//                            ToolbarItem(placement: .topBarLeading) {
-//                      VStack {
-//                        Text("Посты")
-//                              .font(.largeTitle)
-//                          .padding(.top, 85)
-//                          .foregroundColor(.white)
-//                      }
-//                    }
-//                  }
-//                  .toolbarBackground(.visible, for: .navigationBar)
-//                  .toolbarBackground(Constants.Colors.modalGreyColor, for: .navigationBar)
-//                  .navigationBarTitleDisplayMode(.automatic)
-//                }
-                
-                .tabItem {
-                    Image(systemName: "text.word.spacing")
-                    Text("Посты")
-                }
-                .tag(1)
-                
-                
-                Text("Tab 3")
-                    .tabItem {
-                        Image(systemName: "plus")
-                        Text("Создать")
-                    }
-                    .tag(2)
-                
-                Text("Tab 4")
-                    .tabItem {
-                        Image(systemName: "magnifyingglass")
-                        Text("Поиск")
-                    }
-                    .tag(3)
-                
-                Text("Tab 5")
-                    .tabItem {
-                        Image(systemName: "person.crop.circle")
-                        Text("Профиль")
-                    }
-                    .tag(4)
+      
+        
+        ZStack(alignment: .bottom){
+            TabView(selection: $selectTab ) {
+               HowToPlayCV().tag("правила")
+                AllTasksCV().tag("задания")
+                UserProfileCV().tag("профиль")
             }
-            .toolbarBackground(Color.white, for: .tabBar)
-            .toolbarBackground(.visible, for: .tabBar)
-            .padding(.top, 7)
         }
-        .accentColor(Color.mainBlue)
+        
+        HStack {
+            ForEach(tabs, id: \.self) {
+                tab in
+                Spacer()
+                TabBarItem(tab: tab, selected: $selectTab)
+                Spacer()
+            }
+        }.padding(.top, 20).padding(.bottom, 10).frame(maxWidth: .infinity).background(Color.white).clipShape(Capsule())
     }
 }
 
-
+struct TabBarItem: View{
+    @State var tab: String
+    @Binding var selected: String
+    var body: some View{
+        if tab == "профиль" {
+            Button{
+                withAnimation(.spring()){
+                    selected = tab
+                }
+            } label: {
+                ZStack{
+                    VStack{
+                        Image("профиль").frame(width: 36, height: 36).clipShape(Circle())
+                        Text(tab).font(.custom("FugueMono", size: 12)).foregroundColor( selected == tab ? Color.mainBlue : Color.black)
+                    }
+                }
+            }
+            
+        } else{
+            ZStack{
+                Button{
+                    withAnimation(.spring()){
+                        selected = tab
+                    }
+                } label: {
+                    VStack{
+                            Image(tab).resizable().frame(width: 32, height: 32).foregroundColor(selected == tab ? Color.mainBlue : Color.black)
+                            Text(tab).font(.custom("FugueMono", size: 12)).foregroundColor(selected == tab ? Color.mainBlue : Color.black)
+                        
+                    }
+                }
+            }
+        }
+    }
+}

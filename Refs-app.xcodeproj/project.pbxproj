@@ -28,6 +28,9 @@
 		8A5488352BB473B500AE1ADC /* HTTPReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5488342BB473B500AE1ADC /* HTTPReceiver.swift */; };
 		8A5488372BB474B300AE1ADC /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5488362BB474B300AE1ADC /* TabBar.swift */; };
 		8A5488392BB47AFB00AE1ADC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5488382BB47AFB00AE1ADC /* MainView.swift */; };
+		8A54883B2BB4907100AE1ADC /* HowToPlayCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54883A2BB4907100AE1ADC /* HowToPlayCV.swift */; };
+		8A54883D2BB497DF00AE1ADC /* HowToPlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54883C2BB497DF00AE1ADC /* HowToPlayModel.swift */; };
+		8A54883F2BB49C6100AE1ADC /* HTPSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54883E2BB49C6100AE1ADC /* HTPSlide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		8A5488342BB473B500AE1ADC /* HTTPReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPReceiver.swift; sourceTree = "<group>"; };
 		8A5488362BB474B300AE1ADC /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		8A5488382BB47AFB00AE1ADC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8A54883A2BB4907100AE1ADC /* HowToPlayCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayCV.swift; sourceTree = "<group>"; };
+		8A54883C2BB497DF00AE1ADC /* HowToPlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayModel.swift; sourceTree = "<group>"; };
+		8A54883E2BB49C6100AE1ADC /* HTPSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTPSlide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 			children = (
 				8A0175C82B72B27100C8C93E /* RegistrationModel.swift */,
 				8A5470A22B81F55500D7AEE2 /* UserModel.swift */,
+				8A54883C2BB497DF00AE1ADC /* HowToPlayModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,11 +125,13 @@
 		8A0175CD2B72B3D000C8C93E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8A54883A2BB4907100AE1ADC /* HowToPlayCV.swift */,
 				8A0175BB2B72AF6F00C8C93E /* ContentView.swift */,
 				8A0175CB2B72B3C700C8C93E /* RegistrationCV.swift */,
 				8A5470A02B81F47400D7AEE2 /* UserProfileCV.swift */,
 				8A5488312BB470F900AE1ADC /* AllTasksCV.swift */,
 				8A5488382BB47AFB00AE1ADC /* MainView.swift */,
+				8A54883E2BB49C6100AE1ADC /* HTPSlide.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -252,6 +261,8 @@
 			files = (
 				8A5470B72B82295A00D7AEE2 /* SecondaryButton.swift in Sources */,
 				8A0175BC2B72AF6F00C8C93E /* ContentView.swift in Sources */,
+				8A54883F2BB49C6100AE1ADC /* HTPSlide.swift in Sources */,
+				8A54883D2BB497DF00AE1ADC /* HowToPlayModel.swift in Sources */,
 				8A5470A62B81F7D800D7AEE2 /* ProfileImage.swift in Sources */,
 				8A5470B52B8226B900D7AEE2 /* PrimaryButton.swift in Sources */,
 				8A5470A32B81F55500D7AEE2 /* UserModel.swift in Sources */,
@@ -262,6 +273,7 @@
 				8A0175D02B73904100C8C93E /* UIColorExtension.swift in Sources */,
 				8A0175C92B72B27100C8C93E /* RegistrationModel.swift in Sources */,
 				8A0175CC2B72B3C700C8C93E /* RegistrationCV.swift in Sources */,
+				8A54883B2BB4907100AE1ADC /* HowToPlayCV.swift in Sources */,
 				8A5488322BB470F900AE1ADC /* AllTasksCV.swift in Sources */,
 				8A5488392BB47AFB00AE1ADC /* MainView.swift in Sources */,
 				8A5488372BB474B300AE1ADC /* TabBar.swift in Sources */,
