@@ -19,84 +19,85 @@ struct SigninS: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color.white.ignoresSafeArea()
-                VStack(spacing: 20) {
+            NavigationView {
+                ZStack{
+                    Color.lightGray.frame(maxWidth: .infinity, maxHeight: .infinity).ignoresSafeArea()
                     
-                    TextField("Email", text: $email)
-                        .textFieldStyle(RoundedBorderTextFieldStyle()).onAppear {
-                            email = ""
-                            password = ""
-                        }
-                    PasswordTextField("Password", text: $password, isSecure: !isPasswordVisible)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .overlay {
-                            HStack {
+                    VStack(spacing: 40) {
+                        Spacer()
+                        Image("Logo-black").font(.system(size: 40))
+                        VStack(spacing: 20){
+                            Section {
+                                HStack(spacing: 12){
+                                    Image("EmailIcon")
+                                    TextField("Почта", text: $email).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16)).onAppear {
+                                        email = ""
+                                        password = ""
+                                    }
+                                    
+                                }.padding(16).frame(maxWidth: .infinity).background(Color.white).cornerRadius(10)
+                            }.padding(.horizontal, 30)
+                            
+                            Section{
+                                PasswordTextField("Пароль", text: $password, isSecure: !isPasswordVisible)
+                                    .overlay {
+                                        HStack {
+                                            Spacer()
+                                            Button {
+                                                isPasswordVisible.toggle()
+                                            } label: {
+                                                Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill")
+                                                    .foregroundColor(.secondary)
+                                            }
+                                            .padding(.trailing, 8)
+                                        }
+                                    }
                                 Spacer()
-                                Button {
-                                    isPasswordVisible.toggle()
-                                } label: {
-                                    Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill")
-                                        .foregroundColor(.secondary)
+                            }.padding(.horizontal, 30)
+                        }.frame(maxWidth: .infinity, maxHeight: .infinity).background(Color.lightGray).ignoresSafeArea()
+                        
+                        Button {
+                            let body: [String: Any] = [
+                                "user": [
+                                    "email": email,
+                                    "password": password
+                                ]
+                            ]
+                            viewModel.postRequest(endpoint: "sign_in", body: body, callback: { jwt in
+                                if jwt.count > 0 {
+                                    print(jwt)
+                                    authorized = true
+                                    errorState = .Success(message: "You are signed in successfully.")
                                 }
-                                .padding(.trailing, 8)
-                            }
-                        }
-                    
-                    Button {
-                        let body: [String: Any] = [
-                            "user": [
-                                   "email": email,
-                                   "password": password
-                               ]
-                        ]
-                        viewModel.postRequest(endpoint: "sign_in", body: body, callback: { jwt in
-                            if jwt.count > 0 {
-                                print(jwt)
-                                authorized = true
-                                errorState = .Success(message: "You are signed in successfully.")
-                            }
-                        })
-                    } label: {
-                        Text("Login")
-                            .font(.system(size: 25, weight: .bold))
-                            .frame(width: 200, height: 50)
-                            .background(Color.white)
-                            .foregroundColor(.black)
-                            .cornerRadius(10)
+                            })
+                        } label: {
+                            Text("Войти").frame(maxWidth: .infinity).font(.custom("Fugue-Regular", size: 20))
+                                .foregroundColor(Color.white)
+                                    .padding(.vertical, 12)
+                                    .padding(.horizontal)
+                                    .background(Color.mainBlue)
+                                    .cornerRadius(30)
+                        }.padding(.horizontal, 30).padding(.bottom, 60)
+                    }.background(Color.lightGray).navigate(to: MainS(errorState: $errorState), when: $authorized)
+                }.ignoresSafeArea()
+            }.frame(maxWidth: .infinity, maxHeight: .infinity).ignoresSafeArea().background(Color.lightGray)
+            .onReceive(viewModel.$errorState) { newState in
+                if case .Success(_) = errorState {
+                    if case .None = newState {
+                        return
                     }
-                    
-                    // go back
-                    Button {
-                        dismiss()
-                    } label: {
-                        Text("Back")
-                            .font(.system(size: 25, weight: .bold))
-                            .frame(width: 200, height: 40)
-                            .background(Color.black)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
-                }.navigate(to: MainS(errorState: $errorState), when: $authorized)
-            }.padding()
-        }
-        .onReceive(viewModel.$errorState) { newState in
-            if case .Success(_) = errorState {
-                if case .None = newState {
-                    return
+                }
+                withAnimation {
+                    errorState = newState
                 }
             }
-            withAnimation {
-                errorState = newState
-            }
+            .overlay (
+                ErrorView(errorState: $errorState)
+            )
         }
-        .navigationTitle("Sign in")
-        .overlay (
-            ErrorView(errorState: $errorState)
-        )
+        
     }
-}
+
 
 extension View {
     /// Navigate to a new view.

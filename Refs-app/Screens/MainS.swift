@@ -16,6 +16,7 @@ struct MainS: View
     
     var body: some View {
         VStack {
+            Text("DRDCTRFCYFGVGUBI")
             Spacer()
             HStack {
                 Text("Authorized user windows. Press to logout").onTapGesture {

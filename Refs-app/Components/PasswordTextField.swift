@@ -21,12 +21,14 @@ struct PasswordTextField: View
     
     var body: some View {
         Group {
-            if isSecure {
-                SecureField(title, text: $text)
-            } else {
-                TextField(title, text: $text)
-            }
+            HStack(spacing: 12){
+                Image("PasswordIcon")
+                if isSecure {
+                    SecureField(title, text: $text).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16))
+                } else {
+                    TextField(title, text: $text).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16))
+                }
+            }.padding(16).frame(maxWidth: .infinity).background(Color.white).cornerRadius(10)
         }
-        .textFieldStyle(RoundedBorderTextFieldStyle())
     }
 }
