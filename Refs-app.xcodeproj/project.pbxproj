@@ -33,6 +33,22 @@
 		8A54883F2BB49C6100AE1ADC /* HTPSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54883E2BB49C6100AE1ADC /* HTPSlide.swift */; };
 		8A5488842BB4ABD000AE1ADC /* PrimaryButtonWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5488832BB4ABD000AE1ADC /* PrimaryButtonWhite.swift */; };
 		8A5488862BB4AC0B00AE1ADC /* SecondaryButtonWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5488852BB4AC0B00AE1ADC /* SecondaryButtonWhite.swift */; };
+		8AF9A00C2BB75AA900B80888 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A00B2BB75AA900B80888 /* PasswordTextField.swift */; };
+		8AF9A00E2BB75AD500B80888 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A00D2BB75AD500B80888 /* AuthViewModel.swift */; };
+		8AF9A0102BB75B0600B80888 /* UIApplicationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A00F2BB75B0600B80888 /* UIApplicationExt.swift */; };
+		8AF9A0132BB75B3900B80888 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0122BB75B3900B80888 /* HTTPMethod.swift */; };
+		8AF9A0152BB75B5100B80888 /* jwtH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0142BB75B5100B80888 /* jwtH.swift */; };
+		8AF9A0182BB75B7C00B80888 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0172BB75B7C00B80888 /* KeychainHelper.swift */; };
+		8AF9A01A2BB75B9700B80888 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0192BB75B9700B80888 /* Password.swift */; };
+		8AF9A01D2BB75D6000B80888 /* ErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A01C2BB75D6000B80888 /* ErrorState.swift */; };
+		8AF9A01F2BB75D8B00B80888 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A01E2BB75D8B00B80888 /* ErrorView.swift */; };
+		8AF9A0212BB75DBF00B80888 /* RegLogResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0202BB75DBF00B80888 /* RegLogResponse.swift */; };
+		8AF9A0232BB75DE300B80888 /* SignInS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0222BB75DE300B80888 /* SignInS.swift */; };
+		8AF9A0252BB75E2500B80888 /* SignupS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0242BB75E2500B80888 /* SignupS.swift */; };
+		8AF9A0272BB75E9300B80888 /* StartS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0262BB75E9300B80888 /* StartS.swift */; };
+		8AF9A0292BB75F0F00B80888 /* MainAuthS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A0282BB75F0F00B80888 /* MainAuthS.swift */; };
+		8AF9A02B2BB760E300B80888 /* MainS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A02A2BB760E300B80888 /* MainS.swift */; };
+		8AF9A02E2BB7618200B80888 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9A02D2BB7618200B80888 /* NavigationState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +80,22 @@
 		8A54883E2BB49C6100AE1ADC /* HTPSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTPSlide.swift; sourceTree = "<group>"; };
 		8A5488832BB4ABD000AE1ADC /* PrimaryButtonWhite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonWhite.swift; sourceTree = "<group>"; };
 		8A5488852BB4AC0B00AE1ADC /* SecondaryButtonWhite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonWhite.swift; sourceTree = "<group>"; };
+		8AF9A00B2BB75AA900B80888 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		8AF9A00D2BB75AD500B80888 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		8AF9A00F2BB75B0600B80888 /* UIApplicationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExt.swift; sourceTree = "<group>"; };
+		8AF9A0122BB75B3900B80888 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		8AF9A0142BB75B5100B80888 /* jwtH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jwtH.swift; sourceTree = "<group>"; };
+		8AF9A0172BB75B7C00B80888 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		8AF9A0192BB75B9700B80888 /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		8AF9A01C2BB75D6000B80888 /* ErrorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorState.swift; sourceTree = "<group>"; };
+		8AF9A01E2BB75D8B00B80888 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		8AF9A0202BB75DBF00B80888 /* RegLogResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegLogResponse.swift; sourceTree = "<group>"; };
+		8AF9A0222BB75DE300B80888 /* SignInS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInS.swift; sourceTree = "<group>"; };
+		8AF9A0242BB75E2500B80888 /* SignupS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupS.swift; sourceTree = "<group>"; };
+		8AF9A0262BB75E9300B80888 /* StartS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartS.swift; sourceTree = "<group>"; };
+		8AF9A0282BB75F0F00B80888 /* MainAuthS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAuthS.swift; sourceTree = "<group>"; };
+		8AF9A02A2BB760E300B80888 /* MainS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainS.swift; sourceTree = "<group>"; };
+		8AF9A02D2BB7618200B80888 /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +128,10 @@
 		8A0175B82B72AF6F00C8C93E /* Refs-app */ = {
 			isa = PBXGroup;
 			children = (
+				8AF9A02C2BB7617100B80888 /* enums */,
+				8AF9A01B2BB75D0000B80888 /* Error */,
+				8AF9A0162BB75B6800B80888 /* Keychain */,
+				8AF9A0112BB75B2100B80888 /* HTTP */,
 				8A5488332BB4739C00AE1ADC /* Utilities */,
 				8A5470B32B821F7000D7AEE2 /* Info.plist */,
 				8A0175BF2B72AF7100C8C93E /* Preview Content */,
@@ -122,6 +158,8 @@
 				8A0175C82B72B27100C8C93E /* RegistrationModel.swift */,
 				8A5470A22B81F55500D7AEE2 /* UserModel.swift */,
 				8A54883C2BB497DF00AE1ADC /* HowToPlayModel.swift */,
+				8AF9A00D2BB75AD500B80888 /* AuthViewModel.swift */,
+				8AF9A0202BB75DBF00B80888 /* RegLogResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +174,11 @@
 				8A5488312BB470F900AE1ADC /* AllTasksCV.swift */,
 				8A5488382BB47AFB00AE1ADC /* MainView.swift */,
 				8A54883E2BB49C6100AE1ADC /* HTPSlide.swift */,
+				8AF9A0222BB75DE300B80888 /* SignInS.swift */,
+				8AF9A0242BB75E2500B80888 /* SignupS.swift */,
+				8AF9A0262BB75E9300B80888 /* StartS.swift */,
+				8AF9A0282BB75F0F00B80888 /* MainAuthS.swift */,
+				8AF9A02A2BB760E300B80888 /* MainS.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -144,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				8A0175CF2B73904100C8C93E /* UIColorExtension.swift */,
+				8AF9A00F2BB75B0600B80888 /* UIApplicationExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,6 +202,7 @@
 				8A5470B42B8226B900D7AEE2 /* PrimaryButton.swift */,
 				8A5470B62B82295A00D7AEE2 /* SecondaryButton.swift */,
 				8A5488362BB474B300AE1ADC /* TabBar.swift */,
+				8AF9A00B2BB75AA900B80888 /* PasswordTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -189,6 +234,41 @@
 				8A5488342BB473B500AE1ADC /* HTTPReceiver.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8AF9A0112BB75B2100B80888 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				8AF9A0122BB75B3900B80888 /* HTTPMethod.swift */,
+				8AF9A0142BB75B5100B80888 /* jwtH.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		8AF9A0162BB75B6800B80888 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				8AF9A0172BB75B7C00B80888 /* KeychainHelper.swift */,
+				8AF9A0192BB75B9700B80888 /* Password.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		8AF9A01B2BB75D0000B80888 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				8AF9A01C2BB75D6000B80888 /* ErrorState.swift */,
+				8AF9A01E2BB75D8B00B80888 /* ErrorView.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		8AF9A02C2BB7617100B80888 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				8AF9A02D2BB7618200B80888 /* NavigationState.swift */,
+			);
+			path = enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,23 +345,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF9A01A2BB75B9700B80888 /* Password.swift in Sources */,
+				8AF9A02E2BB7618200B80888 /* NavigationState.swift in Sources */,
 				8A5470B72B82295A00D7AEE2 /* SecondaryButton.swift in Sources */,
 				8A0175BC2B72AF6F00C8C93E /* ContentView.swift in Sources */,
+				8AF9A00C2BB75AA900B80888 /* PasswordTextField.swift in Sources */,
 				8A54883F2BB49C6100AE1ADC /* HTPSlide.swift in Sources */,
+				8AF9A01F2BB75D8B00B80888 /* ErrorView.swift in Sources */,
+				8AF9A0212BB75DBF00B80888 /* RegLogResponse.swift in Sources */,
 				8A54883D2BB497DF00AE1ADC /* HowToPlayModel.swift in Sources */,
+				8AF9A01D2BB75D6000B80888 /* ErrorState.swift in Sources */,
 				8A5470A62B81F7D800D7AEE2 /* ProfileImage.swift in Sources */,
 				8A5470B52B8226B900D7AEE2 /* PrimaryButton.swift in Sources */,
 				8A5470A32B81F55500D7AEE2 /* UserModel.swift in Sources */,
 				8A5470A82B81F99600D7AEE2 /* ChangableAvatarView.swift in Sources */,
+				8AF9A0272BB75E9300B80888 /* StartS.swift in Sources */,
+				8AF9A0292BB75F0F00B80888 /* MainAuthS.swift in Sources */,
 				8A0175BA2B72AF6F00C8C93E /* Refs_appApp.swift in Sources */,
+				8AF9A0232BB75DE300B80888 /* SignInS.swift in Sources */,
 				8A5470A12B81F47400D7AEE2 /* UserProfileCV.swift in Sources */,
 				8A5488352BB473B500AE1ADC /* HTTPReceiver.swift in Sources */,
+				8AF9A0252BB75E2500B80888 /* SignupS.swift in Sources */,
 				8A5488842BB4ABD000AE1ADC /* PrimaryButtonWhite.swift in Sources */,
 				8A0175D02B73904100C8C93E /* UIColorExtension.swift in Sources */,
 				8A0175C92B72B27100C8C93E /* RegistrationModel.swift in Sources */,
+				8AF9A0102BB75B0600B80888 /* UIApplicationExt.swift in Sources */,
 				8A0175CC2B72B3C700C8C93E /* RegistrationCV.swift in Sources */,
 				8A54883B2BB4907100AE1ADC /* HowToPlayCV.swift in Sources */,
 				8A5488322BB470F900AE1ADC /* AllTasksCV.swift in Sources */,
+				8AF9A02B2BB760E300B80888 /* MainS.swift in Sources */,
+				8AF9A00E2BB75AD500B80888 /* AuthViewModel.swift in Sources */,
+				8AF9A0132BB75B3900B80888 /* HTTPMethod.swift in Sources */,
+				8AF9A0182BB75B7C00B80888 /* KeychainHelper.swift in Sources */,
+				8AF9A0152BB75B5100B80888 /* jwtH.swift in Sources */,
 				8A5488392BB47AFB00AE1ADC /* MainView.swift in Sources */,
 				8A5488862BB4AC0B00AE1ADC /* SecondaryButtonWhite.swift in Sources */,
 				8A5488372BB474B300AE1ADC /* TabBar.swift in Sources */,

@@ -17,7 +17,7 @@ struct PageView: View {
                 Text(page.description).multilineTextAlignment(.leading)
                     .font(.custom("Fugue-Regular", size: 18)).foregroundColor(Color.white)
                     .frame(maxWidth: .infinity, alignment: .leading)
-            }.frame(width: 270, height: 140, alignment: .leading).padding()
+            }.frame(width: 270, height: 146, alignment: .leading).padding()
             
             Image("\(page.imageUrl)")
                 .resizable()
