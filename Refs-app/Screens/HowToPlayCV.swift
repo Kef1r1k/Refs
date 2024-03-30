@@ -18,8 +18,8 @@ struct HowToPlayCV: View {
              
                VStack(alignment: .leading){
                    HStack{
-                       Text("\(pageIndex + 1)").multilineTextAlignment(.center).font(.custom("Fugue-Regular", size: 42)).foregroundColor(Color.white).frame(width: 80, height: 80).overlay(
-                        RoundedRectangle(cornerRadius: 80)
+                       Text("\(pageIndex + 1)").multilineTextAlignment(.center).font(.custom("Fugue-Regular", size: 42)).foregroundColor(Color.white).frame(width: 60, height: 60).overlay(
+                        RoundedRectangle(cornerRadius: 60)
                             .stroke(Color.white, lineWidth: 1)
                     )
                    }.padding(.top, 16).padding(.leading, 30)

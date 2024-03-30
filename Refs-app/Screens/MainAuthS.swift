@@ -12,36 +12,34 @@ struct MainAuthS: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                // Sign in button
-                NavigationLink(destination: SigninS(errorState: $errorState)) {
-                    Text("Sign in")
-                }
-                .font(.system(size: 25, weight: .bold))
-                .frame(width: 200, height: 50)
-                .background(Color.white)
-                .foregroundColor(.black)
-                .cornerRadius(10)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 10).stroke(Color.white, lineWidth: 5)
-                }
+            ZStack {
+                Color.lightGray.ignoresSafeArea()
+                VStack {
+                    // Sign in button
+                    NavigationLink(destination: SigninS(errorState: $errorState)) {
+                        Text("Войти").frame(maxWidth: .infinity).font(.custom("Fugue-Regular", size: 20))
+                            .foregroundColor(Color.white)
+                            .padding(.vertical, 12)
+                            .padding(.horizontal)
+                            .background(Color.mainBlue)
+                            .cornerRadius(30)
+                    }.padding(.horizontal, 30)
+                    
                     
                     
                     // Sign up button
                     NavigationLink(destination: SignupS(errorState: $errorState)) {
-                        Text("Sign up")
-                    }
-                    .font(.system(size: 25, weight: .bold))
-                    .frame(width: 200, height: 30).padding()
-                    .background(Color.black)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10).stroke(Color.white, lineWidth: 5)
-                    }
+                        Text("Зарегистрироваться").frame(maxWidth: .infinity).font(.custom("Fugue-Regular", size: 20))
+                            .foregroundColor(Color.mainBlue)
+                            .padding(.vertical, 12)
+                            .padding(.horizontal)
+                            .background(Color.white)
+                            .cornerRadius(30)
+                    }.padding(.horizontal, 30)
                     
-                }.navigationTitle("Auth")
-            }
+                }
+            }.navigationViewStyle(StackNavigationViewStyle())
         }
+    }
     }
 

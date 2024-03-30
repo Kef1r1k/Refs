@@ -21,7 +21,7 @@ struct SigninS: View {
     var body: some View {
             NavigationView {
                 ZStack{
-                    Color.lightGray.frame(maxWidth: .infinity, maxHeight: .infinity).ignoresSafeArea()
+                    Color.lightGray.ignoresSafeArea()
                     
                     VStack(spacing: 40) {
                         Spacer()

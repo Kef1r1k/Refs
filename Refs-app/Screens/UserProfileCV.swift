@@ -12,7 +12,7 @@ struct UserProfileCV: View {
     @StateObject var viewModel = UserModel()
     
     var body: some View {
-        VStack{
+        VStack(spacing: 20){
             Section {
                 ChangableAvatarView(viewModel: viewModel)
             }.frame(width: 136, height: 136, alignment: .center).padding(.top, 50)
@@ -61,16 +61,16 @@ struct UserProfileCV: View {
                         }
                     }
                     
-                    Section{
-                        HStack(spacing: 12){
-                            Image("BirthdayIcon")
-                            //                        TextField("Birthday", text: $viewModel.birthday, prompt: Text("День рождения")).frame(alignment: .center)
-                            VStack(alignment: .leading, spacing: 2){
-                                Text("Дата рождения").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
-                                DatePicker("", selection: $viewModel.birthday, displayedComponents: .date).datePickerStyle(.compact).font(.custom("Fugue-Regular", size: 16))
-                            }
-                        }
-                    }
+//                    Section{
+//                        HStack(spacing: 12){
+//                            Image("BirthdayIcon")
+//                            //                        TextField("Birthday", text: $viewModel.birthday, prompt: Text("День рождения")).frame(alignment: .center)
+//                            VStack(alignment: .leading, spacing: 2){
+//                                Text("Дата рождения").foregroundStyle(Color.gray).font(.custom("Fugue-Regular", size: 12))
+//                                DatePicker("", selection: $viewModel.birthday, displayedComponents: .date).datePickerStyle(.compact).font(.custom("Fugue-Regular", size: 16))
+//                            }
+//                        }
+//                    }
                 }.listSectionSpacing(.compact)
             }.scrollContentBackground(.hidden)
                 .padding().onAppear{
@@ -94,9 +94,9 @@ struct UserProfileCV: View {
         let data = UserDefaults.standard.data(forKey: "Avatar") ?? UIImage(named: "Warning")!.jpegData(compressionQuality: 1)!
         let image = UIImage(data: data)!
         viewModel.setImageStateSuccess(image: Image(uiImage: image))
-        let df = DateFormatter()
-        df.dateFormat = "dd/MM/yyyy HH:mm"
-        var birthdayString = df.string(from: viewModel.birthday)
+//        let df = DateFormatter()
+//        df.dateFormat = "dd/MM/yyyy HH:mm"
+//        var birthdayString = df.string(from: viewModel.birthday)
         
         for key in viewModel.keyValues {
             switch key {
@@ -104,7 +104,7 @@ struct UserProfileCV: View {
                 case "Email": viewModel.email = UserDefaults.standard.string(forKey: key) ?? ""
                 case "Nickname": viewModel.nickname = UserDefaults.standard.string(forKey: key) ?? ""
                 case "TG": viewModel.tg = UserDefaults.standard.string(forKey: key) ?? ""
-                case "Birthday": viewModel.birthday = UserDefaults.standard.object(forKey: key) as! Date
+                //case "Birthday": viewModel.birthday = UserDefaults.standard.object(forKey: key) as! Date
 
             default: print("Unknown value")
 

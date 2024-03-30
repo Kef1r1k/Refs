@@ -21,40 +21,49 @@ struct SignupS: View
 
     var body: some View {
         NavigationView {
-            VStack {
-                TextField("Email", text: $email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle()).onAppear {
-                        password = ""
-                        email = ""
-                    }
-                
-                PasswordTextField("Password", text: $password, isSecure: !isPasswordVisible)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .overlay {
-                        HStack {
-                            Spacer()
-                            Button {
-                                isPasswordVisible.toggle()
-                            } label: {
-                                Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill")
-                                    .foregroundColor(.secondary)
+            ZStack{
+                Color.lightGray.ignoresSafeArea()
+            VStack(spacing: 40) {
+                Spacer()
+                Image("Logo-black").font(.system(size: 40))
+                VStack(spacing: 20){
+                    Section {
+                        HStack(spacing: 12){
+                            Image("EmailIcon")
+                            TextField("Почта", text: $email).frame(alignment: .center).font(.custom("Fugue-Regular", size: 16)).onAppear {
+                                email = ""
+                                password = ""
                             }
-                            .padding(.trailing, 8)
-                        }
-                    }
+                            
+                        }.padding(16).frame(maxWidth: .infinity).background(Color.white).cornerRadius(10)
+                    }.padding(.horizontal, 30)
+                    
+                    Section{
+                        PasswordTextField("Пароль", text: $password, isSecure: !isPasswordVisible)
+                            .overlay {
+                                HStack {
+                                    Spacer()
+                                    Button {
+                                        isPasswordVisible.toggle()
+                                    } label: {
+                                        Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill")
+                                            .foregroundColor(.secondary)
+                                    }
+                                    .padding(.trailing, 8)
+                                }
+                            }
+                        Spacer()
+                    }.padding(.horizontal, 30)
+                }.frame(maxWidth: .infinity, maxHeight: .infinity).background(Color.lightGray).ignoresSafeArea()
                 
-                
-            
-                
-    
                 
                 // Defining registration button
                 Button {
                     let body: [String: Any] = [
                         "user": [
-                               "email": email,
-                               "password": password
-                           ]
+                            "email": email,
+                            "password": password
+                        ]
                     ]
                     viewModel.postRequest(endpoint: "sign_up", body: body, callback: { jwt in
                         if jwt.count > 0 {
@@ -64,33 +73,18 @@ struct SignupS: View
                         }
                     })
                 } label: {
-                    Text("Register")
-                        .font(.system(size: 25, weight: .bold))
-                        .frame(width: 200, height: 50)
-                        .background(Color.white)
-                        .foregroundColor(.black)
-                        .cornerRadius(10)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 10).stroke(Color.white, lineWidth: 5)
-                        }
-                }
+                    Text("Зарегистрироваться").frame(maxWidth: .infinity).font(.custom("Fugue-Regular", size: 20))
+                        .foregroundColor(Color.white)
+                        .padding(.vertical, 12)
+                        .padding(.horizontal)
+                        .background(Color.mainBlue)
+                        .cornerRadius(30)
+                }.padding(.horizontal, 30).padding(.bottom, 60)
                 
-                Button {
-                    dismiss()
-                    
-                } label: {
-                    Text("Back")
-                        .font(.system(size: 25, weight: .bold))
-                        .frame(width: 200, height: 40)
-                        .background(Color.black)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                
-            }
-            .navigate(to: MainS(errorState: $errorState), when: $authorized)
-            .padding()
-        }
+            }.background(Color.lightGray)
+                .navigate(to: MainS(errorState: $errorState), when: $authorized)
+    }.ignoresSafeArea()
+    }.frame(maxWidth: .infinity, maxHeight: .infinity).ignoresSafeArea().background(Color.lightGray)
         .onReceive(viewModel.$errorState) { newState in
             if case .Success(_) = errorState {
                 if case .None = newState {
@@ -101,7 +95,6 @@ struct SignupS: View
                 errorState = newState
             }
         }
-        .navigationTitle("Sign up")
         .overlay (
             ErrorView(errorState: $errorState)
         )
