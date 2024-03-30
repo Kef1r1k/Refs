@@ -72,7 +72,7 @@ struct UserProfileCV: View {
 //                        }
 //                    }
                 }.listSectionSpacing(.compact)
-            }.scrollContentBackground(.hidden)
+            }.frame(height: 300).scrollContentBackground(.hidden)
                 .padding().onAppear{
                     restore(viewModel: viewModel)
                 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AllTasksCV: View {
     var body: some View {
-        Text("All tasks")
+        ZStack{
+            Image("AllTasks").frame(maxWidth: .infinity).ignoresSafeArea()
+        }
     }
 }
